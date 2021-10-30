@@ -4,11 +4,11 @@ var app = {
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
-
+    //aqui o botão que cadastra
     onDeviceReady: function() {
         document.getElementById("btnInserir").addEventListener("click",app.inserir);  
     },
-
+    //Aqui é a função de cadastro.
     inserir: function(){
         var db = firebase.firestore();
 
