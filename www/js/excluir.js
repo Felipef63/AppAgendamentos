@@ -9,7 +9,7 @@ var app = {
         document.getElementById("btnBuscar").addEventListener("click",app.buscar);
         document.getElementById("btnExcluir").addEventListener("click",app.excluir);
     },
-    
+    //busca os dados que querem ser excluidos.
     buscar: function(){
         var url_string = window.location.href;
         var url = new URL(url_string);
@@ -33,7 +33,7 @@ var app = {
             console.log("Error getting documents: ", error);
         });
     },
-
+    //essa função, faz a exclusão dos dados escolhidos.
     excluir: function(){ 
         var url_string = window.location.href;
         var url = new URL(url_string);
