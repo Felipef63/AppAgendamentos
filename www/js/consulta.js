@@ -1,10 +1,10 @@
 var app = {
 
-    // Application Constructor
+    //Aqui inicia o evento listar
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
-
+    //Aqui é a parte que apertado o botãoe lista os dados
     onDeviceReady: function() {
         document.getElementById("btnListar").addEventListener("click",app.listar);
     },
@@ -12,7 +12,7 @@ var app = {
     listar: function(){
         var db = firebase.firestore();
         var ag = db.collection("Usuários");
-
+        //Aqui mostra todos os dados
         ag.get()
         .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
