@@ -1,15 +1,14 @@
 var app = {
 
-    // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
-
+    //Aqui tem os botões, para buscar o dado e o outro é para editar
     onDeviceReady: function() {
         document.getElementById("btnBuscar").addEventListener("click",app.buscar);
         document.getElementById("btnEditar").addEventListener("click",app.editar);
     },
-
+    //Essa função é do botão buscar, que busca os dados que o usuario quer mudar.
     buscar: function(){
         var url_string = window.location.href;
         var url = new URL(url_string);
@@ -33,7 +32,7 @@ var app = {
             console.log("Error getting documents: ", error);
         });
     },
-
+    //essa é a função que troca os dados, pelo novos.
     editar: function(){
         var url_string = window.location.href;
         var url = new URL(url_string);
